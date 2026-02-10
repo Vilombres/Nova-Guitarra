@@ -30,6 +30,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
+          # Crucial: Pasamos la clave secreta al proceso de construcción
           API_KEY: ${{ secrets.API_KEY }}
 
       - name: Setup Pages

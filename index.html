@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NovaGuitarra | Profesor de Guitarra & Músico</title>
+    <title>NovaGuitarra | Paco - Profesor de Guitarra</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,7 @@
         scroll-behavior: smooth;
         background-color: var(--dark-bg);
         color: #f3f4f6;
+        margin: 0;
       }
       h1, h2, h3, .font-serif {
         font-family: 'Playfair Display', serif;
@@ -27,40 +28,37 @@
         background: rgba(10, 10, 10, 0.8);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255,255,255,0.05);
       }
       .amber-gradient-text {
         background: linear-gradient(to right, #f59e0b, #d97706);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      ::-webkit-scrollbar {
-        width: 8px;
+      .card-hover {
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
       }
-      ::-webkit-scrollbar-track {
-        background: #0a0a0a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #444;
+      .card-hover:hover {
+        transform: translateY(-10px);
+        border-color: rgba(217, 119, 6, 0.4);
+        background: #111;
       }
     </style>
     <script type="importmap">
-    {
-      "imports": {
-        "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
-        "react/": "https://esm.sh/react@^19.2.4/",
-        "react": "https://esm.sh/react@^19.2.4",
-        "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
-      }
-    }
-    </script>
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
   </head>
   <body>
     <div id="root"></div>
-    <!-- Punto de entrada de la aplicación -->
     <script type="module" src="./index.tsx"></script>
   </body>
 </html>
